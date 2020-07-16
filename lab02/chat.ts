@@ -15,6 +15,7 @@ function broadcast(message: string, senderId?: string): void {
 }
 
 export async function chat(ws: WebSocket): Promise<void> {
+  let opts = {}
   const userId = v4.generate();
 
   // Register user connection
@@ -23,7 +24,7 @@ export async function chat(ws: WebSocket): Promise<void> {
 
   // Wait for new messages
   for await (const event of ws) {
-    const message = camelCase(typeof event === 'string' ? event : '')
+    const message = camelCase(typeof event === 'string' ? event : '', opts)
 
     broadcast(message, userId);
 
