@@ -2,6 +2,8 @@ run:
 	deno run --allow-net --allow-read server.ts
 test:
 	deno test --allow-net --allow-read server.ts
+watch:
+	denon run --allow-net --allow-read server.ts
 format:
 	deno fmt
 debug:
