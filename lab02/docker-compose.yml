@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   deno:
-    image: "deno-lab01:0.0.1"
+    image: "deno-lab02:0.0.1"
     build: .
     ports:
       - "8000:8000"
