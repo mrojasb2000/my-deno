@@ -1,6 +1,6 @@
 import { listenAndServe } from "https://deno.land/std/http/server.ts";
 
-listenAndServe({ port: 8000 }, async (req) => {
+listenAndServe({ port: 3000 }, async (req) => {
   if (req.method === "GET" && req.url === "/") {
     req.respond({
       status: 200,

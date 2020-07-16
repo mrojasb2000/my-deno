@@ -5,7 +5,7 @@ services:
     image: "deno-lab01:0.0.1"
     build: .
     ports:
-      - "3000:3000"
+      - "8000:8000"
     networks:
       - deno
 networks:
