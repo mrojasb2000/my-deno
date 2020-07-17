@@ -2,7 +2,7 @@ import { Router } from "https://deno.land/x/oak/mod.ts";
 
 import getUsers from "./handlers/getUsers.ts";
 import getUserDetails from "./handlers/getUserDetails.ts";
-import createUser from "./handles/createUser.ts";
+import createUser from "./handlers/createUser.ts";
 import updateUser from "./handlers/updateUser.ts";
 import deleteUser from "./handlers/deleteUser.ts";
 
