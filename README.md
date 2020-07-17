@@ -13,3 +13,7 @@ docker-compose up
 docker-compose stop
 
 docker-compose down
+
+deno run --allow-net --allow-read --allow-write <APP.ts>
+
+deno run -A index.ts
