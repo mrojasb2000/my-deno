@@ -9,10 +9,10 @@ import deleteUser from "./handlers/deleteUser.ts";
 const router = new Router();
 
 router
-    .get("/users", getUsers)
-    .get("/users/:id", getUserDetails)
-    .post("/users", createUser)
-    .put("/users/:id", updateUser)
-    .delete("/users/:id", deleteUser);
+  .get("/users", getUsers)
+  .get("/users/:id", getUserDetails)
+  .post("/users", createUser)
+  .put("/users/:id", updateUser)
+  .delete("/users/:id", deleteUser);
 
-export default router;    
+export default router;

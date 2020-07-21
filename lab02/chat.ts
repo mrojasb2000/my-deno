@@ -3,7 +3,7 @@ import {
   isWebSocketCloseEvent,
 } from "https://deno.land/std/ws/mod.ts";
 import { v4 } from "https://deno.land/std/uuid/mod.ts";
-import { camelCase } from './deps.ts'
+import { camelCase } from "./deps.ts";
 
 const users = new Map<string, WebSocket>();
 
@@ -15,7 +15,7 @@ function broadcast(message: string, senderId?: string): void {
 }
 
 export async function chat(ws: WebSocket): Promise<void> {
-  let opts = {}
+  let opts = {};
   const userId = v4.generate();
 
   // Register user connection
@@ -24,7 +24,7 @@ export async function chat(ws: WebSocket): Promise<void> {
 
   // Wait for new messages
   for await (const event of ws) {
-    const message = camelCase(typeof event === 'string' ? event : '', opts)
+    const message = camelCase(typeof event === "string" ? event : "", opts);
 
     broadcast(message, userId);
 

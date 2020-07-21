@@ -14,4 +14,3 @@ app.use(notFound);
 console.log(`Listering on ${APP_PORT}...`);
 
 await app.listen(`${APP_HOST}:${APP_PORT}`);
-

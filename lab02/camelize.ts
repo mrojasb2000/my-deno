@@ -7,12 +7,12 @@ import { camelCase } from "./deps.ts";
  * @returns {string}
  */
 export function camelize(text: string): any {
-    let opts = {}
-    const camelCaseText = camelCase(text, opts)
-    const matches = camelCaseText.match(/[A-Z]/g) || []
-    const camels = Array.from({ length: matches.length })
-        .map(() => '🐪')
-        .join('')
+  let opts = {};
+  const camelCaseText = camelCase(text, opts);
+  const matches = camelCaseText.match(/[A-Z]/g) || [];
+  const camels = Array.from({ length: matches.length })
+    .map(() => "🐪")
+    .join("");
 
-    return `${camelCaseText} ${camels}`
+  return `${camelCaseText} ${camels}`;
 }
