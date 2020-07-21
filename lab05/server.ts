@@ -10,4 +10,3 @@ app.use(router.allowedMethods())
 console.log(`Server running on port ${port}`)
 
 await app.listen({ port })
-
