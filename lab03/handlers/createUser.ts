@@ -8,6 +8,9 @@ export default async (
     response.body = { msg: "Invalid user data" };
     return;
   }
+  const body = await request.body();
+  console.log(request);
+
 
   const {
     value: { name, role, jiraAdmin },

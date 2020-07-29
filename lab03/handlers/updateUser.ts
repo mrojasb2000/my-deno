@@ -26,6 +26,8 @@ export default async (
     value: { name, role, jiraAdmin },
   } = await request.body();
 
+  console.log("NAME:", name);
+
   await updateUser(userId, { name, role, jiraAdmin });
 
   response.body = { msg: "User updated" };
